@@ -1,0 +1,29 @@
+.actions {
+    display: flex;
+    gap: 1rem;
+    
+}
+
+.deny {
+    flex: 1;
+    background-color: var(--Error_Color);
+    color: rgba(from var(--Black_Color) r g b / 90%);
+    font-weight: 500;
+    border: none;
+    padding: 0.4rem 0.25rem;
+    border-radius: 0.5rem;
+    font-size: var(--Font_Size_2);
+    cursor: pointer;
+}
+
+.accept {
+    flex: 1;
+    background-color: var(--Success_Color);
+    color: rgba(from var(--Black_Color) r g b / 90%);
+    font-weight: 500;
+    border: none;
+    padding: 0.4rem 0.25rem;
+    border-radius: 0.5rem;
+    font-size: var(--Font_Size_2);
+    cursor: pointer;
+}

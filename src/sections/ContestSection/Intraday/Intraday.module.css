@@ -1,0 +1,28 @@
+
+.wrapper {
+    padding: 01rem;
+        border-radius: 1rem;
+        min-height: 550px;
+        background-color: var(--Background_Color);
+        border: 0.001px solid rgba(from var(--White_Color) r g b / 25%);
+}
+
+.headerRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.dropdownGroup {
+    display: flex;
+    gap: 1rem;
+}
+
+.cardGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}

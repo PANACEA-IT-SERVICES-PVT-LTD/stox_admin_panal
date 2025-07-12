@@ -1,0 +1,23 @@
+.wrapper {
+  padding: 01rem;
+  border-radius: 1rem;
+  min-height:550px;
+  background-color: var(--Background_Color);
+  border: 0.001px solid rgba(from var(--White_Color) r g b / 25%);
+}
+
+.dropdownGroup {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-bottom: 1rem;
+
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal-width cards */
+  gap: 1rem; /* Or adjust to taste */
+  width: 100%;
+}
+

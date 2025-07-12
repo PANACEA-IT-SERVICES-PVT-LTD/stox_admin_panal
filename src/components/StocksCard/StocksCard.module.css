@@ -1,0 +1,65 @@
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(from var(--White_Color) r g b / 3.5%);
+    border-radius: 1rem;
+    padding: 1rem 0.5rem;
+    box-shadow: 0 4px 4px 0px rgba(from var(--White_Color) r g b / 25%);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 0.001px solid rgba(from var(--White_Color) r g b / 25%);
+}
+
+.card:hover {
+    background-color: #252525;
+}
+
+.selected {
+    border-color: #b07f25;
+    /* optional accent border */
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 0rem;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.title {
+    font-weight: 400;
+    font-size: var(--Font_Size_3);
+    color: rgba(from var(--White_Color) r g b / 90%);
+}
+
+.subtitle {
+    font-size: var(--Font_Size_2);
+    color: rgba(from var(--White_Color) r g b / 40%);
+}
+
+.radioIndicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle {
+    width: 18px;
+    height: 18px;
+    border: 1px solid rgba(from var(--White_Color) r g b / 50%);
+    border-radius: 50%;
+    margin-right: 0.1rem;
+    transition: background 0.3s ease;
+}
+
+.filled {
+    background-color: var(--Accent_Color_Dark);
+    /* gold fill when selected */
+    border-color: #b07f25;
+}

@@ -1,0 +1,11 @@
+.header {
+    position: relative;
+}
+
+.priceAmount {
+    font-size: 20px ;
+}
+
+.CardStyle {
+    border-radius: 2rem;
+}

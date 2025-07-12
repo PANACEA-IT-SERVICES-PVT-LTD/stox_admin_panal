@@ -1,0 +1,46 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+}
+.topHeading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem 0.5rem;
+    color: var(--White_Color);
+    font-size: var(--Font_Size_4);
+}
+.heading > p{
+    font-size: var(--Font_Size_5);
+    font-weight: 400;
+}
+
+.topActions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+  
+    margin:1rem 1rem 0rem 0rem;
+   
+    
+}
+.rightsection{
+    display: flex;
+    gap:0.8rem;
+}
+
+
+
+.actionButton {
+    background: linear-gradient(to right, var(--Accent_Color_Light), var(--Accent_Color_Dark));
+    color: var(--Black_Color);
+    border: none;
+    border-radius: 12px;
+  
+    font-size: var(--Font_Size_3);
+    cursor: pointer;
+    font-weight: 600;
+}

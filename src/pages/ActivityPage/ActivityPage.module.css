@@ -1,0 +1,48 @@
+.background {
+    background: var(--Background_Color);
+    
+    color: var(--White_Color);
+    padding: 2rem;
+    font-family: var(--Font_Family);
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+}
+
+.maincontainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.profilecard{
+    margin-bottom:1.5rem;
+}
+
+.tabHeader {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.tabItem {
+    font-size: var(--Font_Size_3);
+    cursor: pointer;
+    padding-bottom: 4px;
+    color: var(--White_Color);
+}
+
+.activeTab {
+    color: var(--Accent_Color_Light);
+    border-bottom: 2px solid var(--Accent_Color_Light);
+}
+
+.dateFilter {
+    margin-left: auto;
+}
+
+.buttonRow {
+    margin-top: 1rem;
+}

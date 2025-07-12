@@ -1,0 +1,45 @@
+.TabSelector {
+    width: max-content;
+    position: relative;
+    background-color: transparent;
+    padding: 0.2rem;
+    border-radius: 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+    font-size: 10px;
+    overflow: hidden;
+}
+
+.TabOptionsContainer {
+    display: flex;
+    position: relative;
+}
+
+.TabOption {
+    font-size: var(--Font_Size_2);
+    padding: 0.3rem 1rem;
+    border-radius: 3rem;
+    cursor: pointer;
+    color: var(--White_Color);
+    position: relative;
+    z-index: 1;
+    white-space: nowrap;
+    transition: color 300ms ease;
+}
+
+/* Gradient background bar for active tab */
+.tabBackground {
+    position: absolute;
+    height: 100%;
+    border-radius: 3rem;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right,
+            var(--Accent_Color_Light),
+            var(--Accent_Color_Dark));
+            transition: transform 150ms ease-in-out, width 150ms ease-in-out;
+    z-index: 0;
+}

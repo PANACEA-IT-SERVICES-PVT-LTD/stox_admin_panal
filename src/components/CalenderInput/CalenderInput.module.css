@@ -1,0 +1,72 @@
+.fieldWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.fieldLabel {
+    font-size: var(--Font_Size_3);
+    font-weight: 400;
+    color: var(--Black_Color);
+}
+
+.required {
+    color: var(--Black_Color);
+    /* ✅ same as label */
+    margin-left: 2px;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background: transparent;
+    border-radius: 12px;
+    border: 1px solid rgba(from var(--White_Color) r g b / 0.5);
+    font-size: var(--Font_Size_2);
+    color: rgba(from var(--White_Color) r g b / 0.5);
+    cursor: pointer;
+    width: 100%;
+    min-width: 150px;
+    gap: 0.5rem;
+}
+
+.overlayText {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: rgba(from var(--White_Color) r g b / 0.7);
+}
+
+.icon {
+    color: rgba(from var(--White_Color) r g b / 0.7);
+
+      
+        /* or var(--White_70) */
+        flex-shrink: 0;
+        cursor: pointer;
+        z-index: 2;
+        /* ⬆️ ensures it's above the input */
+        position: relative; }
+
+
+.input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+   
+    z-index: 1;
+    /* 🔽 lower than .icon */ }
+
+
+.errorMessage {
+    display: none;
+    /* ✅ hide required text message */
+}
+
+.error {
+    border: 1px solid transparent;
+    /* ✅ suppress error styling */
+}

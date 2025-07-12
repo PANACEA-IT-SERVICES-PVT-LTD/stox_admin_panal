@@ -1,0 +1,104 @@
+.background {
+    background: var(--Background_Color);
+    color: var(--White_Color);
+    padding: 2rem;
+    font-family: var(--Font_Family);
+}
+.header {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.titleWrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+   
+}
+
+.backIcon {
+    color: rgba(from var(--White_Color) r g b / 90%);
+    cursor: pointer;
+}
+
+.pageTitle {
+    font-size: var(--Font_Size_4);
+    font-weight: 400;
+    color: rgba(from var(--White_Color) r g b / 90%);
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+}
+
+.profilecard {
+    margin-bottom: 1.5rem;
+}
+
+.maincontainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    margin-top: 1.5rem;
+}
+
+.tabHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.tabHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.rightActions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.walletBalance {
+    font-size: var(--Font_Size_3);
+    font-weight: 400;
+    color:rgba(from var(--White_Color) r g b / 90%);
+}
+.toggles{
+    display: flex;
+    gap:1.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.tabItem {
+    font-size: var(--Font_Size_3);
+    cursor: pointer;
+    padding-bottom: 4px;
+    color: var(--White_Color);
+}
+
+.activeTab {
+    color: var(--Accent_Color_Light);
+    border-bottom: 2px solid var(--Accent_Color_Light);
+}
+
+.downloadBtn {
+    margin-left: auto;
+    padding: 0.6rem 1.2rem;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: var(--Font_Size_3);
+    background: var(--Gold_Gradient);
+    color: #000;
+    border: none;
+    cursor: pointer;
+}
+
+.buttonRow {
+    margin-top: 1rem;
+}

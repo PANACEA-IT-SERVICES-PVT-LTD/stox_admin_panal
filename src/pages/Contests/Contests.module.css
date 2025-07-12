@@ -1,0 +1,57 @@
+.background {
+    background: var(--Background_Color);
+    color: var(--White_Color);
+    padding: 2rem;
+    font-family: var(--Font_Family);
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+}
+
+.maincontainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.tabContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.tabGroup {
+    display: flex;
+    gap: 2rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 12px;
+
+    border: 1px solid rgba(from var(--White_Color) r g b / 20.5%);
+
+}
+
+.tabItem {
+    font-size: var(--Font_Size_3);
+    cursor: pointer;
+    font-weight: 500;
+    color: rgba(from var(--White_Color) r g b / 67.5%);
+}
+
+.activeTab {
+    background: linear-gradient(to left, var(--Accent_Color_Dark), var(--Accent_Color_Light));
+    /* light to dark */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* For Firefox */
+    color: transparent;
+
+}
+
+.dateFilter {
+    margin-left: auto;
+}

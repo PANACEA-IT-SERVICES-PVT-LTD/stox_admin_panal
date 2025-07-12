@@ -1,0 +1,25 @@
+.wrapper {
+ 
+    height: 550px;
+}
+
+.nameCheckbox {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .checkbox {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: var(--Background_Color); /* or your desired color */
+  }
+  
+  .headerCheckbox {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      /* Adjust gap here */
+  }
+

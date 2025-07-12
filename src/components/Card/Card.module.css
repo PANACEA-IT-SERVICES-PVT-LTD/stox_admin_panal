@@ -1,0 +1,119 @@
+.Card {
+    background-color: var(--Background_Color);
+    color: var(--Primary_Color);
+    padding: 1rem;
+    border-radius: 12px;
+    position: relative;
+    border: 2px solid var(--Accent_Color_Light);
+    box-shadow: 0 4px 4px 0 rgba(255, 255, 255, 0.1);
+}
+
+.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.maintenance {
+    border-color: var(--Accent_Color_Light);
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    color: var(--White_Color);
+}
+
+.badge {
+    background: var(--White_Color);
+    color: var(--Black_Color);
+    border-radius: 12px;
+    padding: 0.2rem 0.6rem;
+}
+
+.timer {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    color: var(--White_Color);
+}
+
+.progressWrapper {
+    background: var(--Accent_Color_Dark);
+    height: 6px;
+    border-radius: 3px;
+    overflow: hidden;
+    margin: 0.5rem 0;
+}
+
+.progress {
+    background: var(--Accent_Color_Light);
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+.spots {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: var(--White_Color);
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--Primary_Color);
+}
+
+.link {
+    color: var(--Accent_Color_Light);
+    cursor: pointer;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: var(--White_Color);
+}
+
+.overlay {
+    position: absolute;
+    top: 45%;
+    left: 25%;
+    font-size: 1.2rem;
+    color: var(--Accent_Color_Light);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.lock {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.title {
+    color: var(--Accent_Color_Light);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.message {
+    font-size: 0.9rem;
+    color: var(--White_Color);
+}
+
+.icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.disabledText {
+    color: var(--Accent_Color_Dark);
+}

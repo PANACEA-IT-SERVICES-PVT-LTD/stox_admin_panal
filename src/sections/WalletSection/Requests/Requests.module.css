@@ -1,0 +1,37 @@
+.wrapper {
+    padding: 0.75rem;
+}
+
+.topRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.searchDownload {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.searchInput {
+    padding: 0.6rem 1rem;
+    border-radius: 0.5rem;
+    background: linear-gradient(to left, #1e1e1e, #2a2a2a);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    outline: none;
+}
+
+.downloadButton {
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    background: linear-gradient(to left, #daa520, #b8860b);
+    color: white;
+    border: none;
+    cursor: pointer;
+}

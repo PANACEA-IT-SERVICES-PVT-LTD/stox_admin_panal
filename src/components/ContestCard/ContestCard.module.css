@@ -1,0 +1,145 @@
+.card {
+  position: relative;
+  background-color: #1e1e1e;
+  border-radius: 16px;
+  padding: 1rem;
+  overflow: hidden;
+  border: 0.001px solid rgba(from var(--White_Color) r g b / 25%);
+  box-shadow: 0 4px 4px 0px rgba(from var(--White_Color) r g b / 25%);
+  background-color: rgba(from var(--White_Color) r g b / 3.5%);
+}
+.insidecontent{
+  padding-top:0.9rem;
+  padding-bottom: 0.75rem;
+}
+
+.entryTag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--White_Color);
+  color: var(--Black_Color);
+  font-weight: 500;
+  padding: 0.4rem 1.2rem;
+  font-size: 1rem;
+  border-bottom-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-top-left-radius:30px;
+  border-bottom-right-radius: 0;
+  z-index: 10;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+}
+.leaderboardLink {
+  color: var(--Accent_Color_Light);
+  font-weight: 400;
+  cursor: pointer;
+ 
+  font-size: var(--Font_Size_1);
+  transition: opacity 0.2s ease;
+}
+.cardWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+
+
+.leaderboardLink:hover {
+  opacity: 0.85;
+}
+.overlay {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #d4a73d;
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.header {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.subText {
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+.timeRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  opacity: 0.85;
+
+  margin-bottom: 0.25rem;
+}
+
+.progressBar {
+  width: 100%;
+  height: 6px;
+  background-color: #ccc;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 0.25rem;
+}
+
+.filled {
+  height: 100%;
+  background-color: #d4a73d;
+}
+
+.spots {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--Font_Size_1);
+  margin-bottom: 0.75rem;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.info img {
+  height: 18px;
+  width: 18px;
+  object-fit: contain;
+}
+
+.timeLeft,.timeSlot{
+  font-size: var(--Font_Size_1);
+}
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.actions span {
+  cursor: pointer;
+  text-decoration: underline;
+}

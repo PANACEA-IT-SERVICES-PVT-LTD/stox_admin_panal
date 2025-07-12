@@ -1,0 +1,63 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+}
+
+.card {
+    background-color: rgba(from var(--White_Color) r g b / 3.5%);
+    color: var(--Primary_Color);
+    border-radius: 12px;
+    padding: 0.4rem;
+    border: 0.01px solid var(--Accent_Color_Light);
+    /* ✅ Gold border */
+    width: 100%;
+    text-align: center;
+
+    /* ✅ Matched shadow from Figma */
+    box-shadow: 0px 2.71px 4.71px 1px var(--Accent_Color_Dark);
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.title {
+    font-size: var(--Font_Size_4);
+    color: rgba(from var(--Accent_Color_Light) r g b / 87.5%);
+
+    margin-bottom: 0.5rem;
+}
+
+.description {
+    font-size: var(--Font_Size_3);
+    color: rgba(from var(--White_Color) r g b / 67.5%);
+    line-height: 1.4;
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 0.5rem;
+    gap: 1rem;
+    font-weight: bold;
+}
+
+.action {
+    color: var(--White_Color);
+    border-bottom: 0.01px solid var(--White_Color);
+    cursor: pointer;
+    font-size: var(--Font_Size_2);
+    color: rgba(from var(--White_Color) r g b / 71.5%);
+    transition: color 0.2s ease;
+}
+
+.action:hover {
+    color: var(--Accent_Color_Light);
+}

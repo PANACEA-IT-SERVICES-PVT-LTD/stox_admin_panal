@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.buttonRow {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+.noResult {
+    color: var(--White_Color);
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.1rem;
+    opacity: 0.6;
+}

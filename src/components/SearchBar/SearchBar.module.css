@@ -1,0 +1,22 @@
+.SearchBar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 16px;
+    box-shadow: 0px 4px 12px 0px rgba(from var(--Primary_Color) r g b / 10%);
+    min-width: 160px;
+    width:100%;
+    background-color: rgba(from var(--White_Color) r g b / 3.5%);
+}
+
+.SearchBar input {
+    flex: 1;
+    padding: 4px;
+    border: none;
+    border-radius: 4px;
+    background-color: transparent;
+    outline: none;
+    font-size: 16px;
+}
