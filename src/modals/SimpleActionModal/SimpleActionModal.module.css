@@ -1,0 +1,39 @@
+.modalWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.03);
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+}
+
+.modal {
+    background-color: black;
+    padding: 30px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    color: rgba(from var(--White_Color) r g b / 90.5%);
+    font-size: var(--Font_Size_4);
+    font-weight: 400;
+    margin: 0;
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 25px;
+    gap:0.5rem;
+}

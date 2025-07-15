@@ -8,6 +8,7 @@ import WalletPage from '../pages/WalletPage/WalletPage';
 import Dashboard from '../pages/Dashboard/Dashboard';
 import Contests from '../pages/Contests/Contests';
 import UserProfile from '../pages/UserProfile/UserProfile';
+import CreateNotification from '../modals/CreateNotification/CreateNotification';
 
 function AppRoutes() {
   return (
@@ -17,6 +18,7 @@ function AppRoutes() {
       {/*  */}
       {/* Routes inside Dashboard layout */}
       <Route path="/" element={<DashboardLayout />}>
+      <Route path="/checkup" element={<CreateNotification />} />
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/usermanagement" element={<UserManagement />} />
       <Route path="/contests" element={<Contests />} />

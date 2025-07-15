@@ -1,0 +1,6 @@
+.closeText {
+    color: var(--Error_Color);
+    font-size: var(--Font_Size_3);
+    font-weight: bold;
+    cursor: pointer;
+}

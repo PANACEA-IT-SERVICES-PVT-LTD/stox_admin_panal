@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import Dropdown from "../../../components/Dropdown/Dropdown";
 import ContestCard from "../../../components/ContestCard/ContestCard";
 import styles from "./BuyTodaySellTomorrow.module.css";
-
+import { useDispatch } from "react-redux";
+import { openModal } from "../../../redux/slices/modalSlice";
 const BuyTodaySellTomorrow = () => {
   const [contestType, setContestType] = useState("All Contests");
   const [contestStatus, setContestStatus] = useState("Upcoming Contests");
@@ -74,6 +75,8 @@ const BuyTodaySellTomorrow = () => {
       prev.map((c) => (c.id === id ? { ...c, isDisabled: !c.isDisabled } : c))
     );
   };
+  const dispatch = useDispatch();
+
 
   return (
     <div className={styles.wrapper}>
@@ -103,10 +106,31 @@ const BuyTodaySellTomorrow = () => {
             winAmount={contest.reward}
             winPercentage={contest.payout}
             isDisabled={contest.isDisabled}
-            onEdit={() => console.log("Edit", contest.id)}
+            onEdit={() => dispatch(openModal("editContest"))}
             onDelete={() => console.log("Delete", contest.id)}
             onDisable={() => toggleStatus(contest.id)}
-            onJoin={() => console.log("Leaderboard", contest.id)}
+            onJoin={() =>
+              dispatch(
+                openModal({
+                  type: "winningsAndLeaderboard",
+                  data: {
+                    title: "Leader Board",
+                    winningsData: [
+                      { standing: "#1", amount: "80 rs" },
+                      { standing: "#2", amount: "60 rs" },
+                      { standing: "#3-6", amount: "40 rs" },
+                      { standing: "#6-10", amount: "20 rs" },
+                    ],
+                    leaderboardData: [
+                      { standing: "#1", player: "Darshan T1" },
+                      { standing: "#2", player: "Ravi Kumar" },
+                      { standing: "#3", player: "Anjali M" },
+                      { standing: "#6", player: "Rahul S" },
+                    ],
+                  },
+                })
+              )
+            }
           />
         ))}
       </div>

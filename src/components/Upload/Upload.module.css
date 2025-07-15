@@ -1,0 +1,35 @@
+.uploadWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.label {
+    
+    color: rgba(from var(--White_Color) r g b / 90.5%);
+        font-size: var(--Font_Size_4);
+        font-weight: 400;
+}
+
+.uploadBox {
+    background-color: #1d1d1d;
+    border-radius: 14px;
+    color: rgba(from var(--White_Color) r g b / 90.5%);
+    text-align: center;
+    cursor: pointer;
+    padding: 30px;
+    /* default */
+}
+
+.innerContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgba(from var(--White_Color) r g b / 70.5%);
+    font-size: var(--Font_Size_3);
+}
+
+.fileInput {
+    display: none;
+}

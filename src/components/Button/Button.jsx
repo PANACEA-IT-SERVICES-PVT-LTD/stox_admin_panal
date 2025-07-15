@@ -13,11 +13,15 @@ function Button({
       ? `${styles.button} ${styles.outlined}`
       : styles.button;
 
-  const customStyle = {
-    ...(backgroundColor && { background: backgroundColor }),
-    ...(textColor && { color: textColor }),
-    ...(borderColor && { border: `1px solid ${borderColor}` }),
-  };
+      const customStyle = {
+        ...(backgroundColor && { background: backgroundColor }),
+        ...(textColor && { color: textColor }),
+        ...(borderColor && {
+          border: `1px solid ${borderColor}`,
+          color: borderColor,
+        }),
+      };
+      
 
   return (
     <button className={buttonClass} style={customStyle} onClick={onClick}>

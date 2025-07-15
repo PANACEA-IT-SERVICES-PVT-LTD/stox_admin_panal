@@ -4,6 +4,8 @@ import { useState } from "react";
 import { MdModeEdit } from "react-icons/md";
 import AcceptDeny from "../../../components/AcceptDeny/AcceptDeny"; // your component
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { openModal } from "../../../redux/slices/modalSlice";
 const userData = [
   {
     _id: "1",
@@ -47,6 +49,9 @@ const UserKYCDetails = () => {
   const [selectedIds, setSelectedIds] = useState([]);
   const [statusMap, setStatusMap] = useState({}); // _id -> "Approved" | "Rejected"
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const [reasonMap, setReasonMap] = useState({});
+
   const headings = [
     {
       title: (
@@ -106,7 +111,26 @@ const UserKYCDetails = () => {
       phone: item.phone,
       pan: item.pan,
       dob: item.dob,
-      panImage: <u>{item.panImage}</u>,
+      panImage: (
+        <u
+          style={{ cursor: "pointer" }}
+          onClick={() =>
+            dispatch(
+              openModal({
+                type: "viewPanDetails",
+                data: {
+                  name: "John Doe",
+                  dateOfBirth: "10-11-1990",
+                  panNumber: "SDFPT8543W",
+                  imageLabel: "my pan.png",
+                },
+              })
+            )
+          }
+        >
+          {item.panImage}
+        </u>
+      ),
 
       status:
         status === "Pending" ? (
@@ -114,15 +138,48 @@ const UserKYCDetails = () => {
             onAccept={() =>
               setStatusMap((prev) => ({ ...prev, [item._id]: "Approved" }))
             }
-            onDeny={() =>
-              setStatusMap((prev) => ({ ...prev, [item._id]: "Rejected" }))
-            }
+            onDeny={() => {
+              setStatusMap((prev) => ({ ...prev, [item._id]: "Rejected" }));
+              dispatch(
+                openModal({
+                  type: "reasonModal",
+                  data: {
+                    userId: item._id,
+                    reason: reasonMap[item._id] || "",
+                    onSave: (newReason) =>
+                      setReasonMap((prev) => ({
+                        ...prev,
+                        [item._id]: newReason,
+                      })),
+                  },
+                })
+              );
+            }}
           />
         ) : (
           <span
             className={
               status === "Approved" ? styles.approved : styles.rejected
             }
+            style={{ cursor: status === "Rejected" ? "pointer" : "default" }}
+            onClick={() => {
+              if (status === "Rejected") {
+                dispatch(
+                  openModal({
+                    type: "reasonModal",
+                    data: {
+                      userId: item._id,
+                      reason: reasonMap[item._id] || "",
+                      onSave: (newReason) =>
+                        setReasonMap((prev) => ({
+                          ...prev,
+                          [item._id]: newReason,
+                        })),
+                    },
+                  })
+                );
+              }
+            }}
           >
             {status}
           </span>

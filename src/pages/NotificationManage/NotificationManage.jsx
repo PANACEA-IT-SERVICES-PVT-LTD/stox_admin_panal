@@ -4,7 +4,9 @@ import Button from "../../components/Button/Button";
 import CalendarInput from "../../components/CalenderInput/CalenderInput" // ✅
 import styles from "./NotificationManage.module.css";
 import notificationIcon from "../../assets/notificationmanage.png";
-
+import { useDispatch } from "react-redux";
+import { openModal } from "../../redux/slices/modalSlice";
+import { closeModal } from "../../redux/slices/modalSlice";
 function NotificationManage() {
   const [selectedDate, setSelectedDate] = useState("");
 
@@ -18,14 +20,20 @@ function NotificationManage() {
 
   const handleAction = (action) => {
     console.log("Clicked action:", action);
+    if (action === "Edit") {
+      dispatch(openModal("createNotification"));
+    }
   };
+  
+  const dispatch = useDispatch();
+
 
   return (
     <>
       {/* ✅ Row 1: Heading */}
       <div className={styles.topHeading}>
-      <div className={styles.heading}>
-        <p>Select and send these notifications to participants</p>
+        <div className={styles.heading}>
+          <p>Select and send these notifications to participants</p>
         </div>
         <div className={styles.rightsection}>
           <CalendarInput
@@ -44,7 +52,9 @@ function NotificationManage() {
 
       {/* ✅ Row 2: Date + Buttons */}
       <div className={styles.topActions}>
-        <Button>Choose participants</Button>
+        <Button onClick={() => dispatch(openModal("chooseParticipants"))}>
+          Choose participants
+        </Button>
       </div>
 
       {/* ✅ Cards */}

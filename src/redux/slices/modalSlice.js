@@ -5,6 +5,7 @@ const modalSlice = createSlice({
   initialState: {
     isOpen: false,
     type: "",
+    data : null,
  
   },
 
@@ -12,13 +13,15 @@ const modalSlice = createSlice({
     openModal: (state, action) => {
       state.isOpen = true;
       state.type = action.payload?.type || action.payload;
+      state.data = action.payload?.data || null ;
      
     },
     closeModal: (state) => {
       state.isOpen = false;
       state.type = "";
-      state.config = {};
-    },
+      state.data = null ;
+    }
+  
   },
 });
 

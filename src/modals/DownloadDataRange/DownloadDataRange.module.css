@@ -1,0 +1,57 @@
+.modalWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modalContent {
+    background-color:var(--Background_Color);
+    padding: 25px 30px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.header h2 {
+    color: rgba(from var(--White_Color) r g b / 90.5%);
+    font-size: var(--Font_Size_4);
+    font-weight: 400;
+    margin: 0;
+}
+
+.dateRow {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 1.5rem;
+}
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.dateField {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    color: white;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}

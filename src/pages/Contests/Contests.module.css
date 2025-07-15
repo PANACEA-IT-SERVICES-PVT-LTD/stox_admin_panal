@@ -2,15 +2,19 @@
     background: var(--Background_Color);
     color: var(--White_Color);
     padding: 2rem;
+    
+    overflow: auto;
     font-family: var(--Font_Family);
 }
 
 .section {
+    overflow: auto;
     display: flex;
     flex-direction: column;
 }
 
 .maincontainer {
+    overflow: auto;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;

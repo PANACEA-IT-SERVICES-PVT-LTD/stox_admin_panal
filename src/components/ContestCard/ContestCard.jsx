@@ -5,25 +5,27 @@ import coin from "../../assets/coin.png";
 import crown from "../../assets/crown.png";
 
 const ContestCard = ({
-  price = 80,
-  entry = "50rs",
-  timeLeft = "2 : 00 : 34 sec Left",
-  timeSlot = "Friday 9:30am to 3:30pm",
-  leftSpots = 1,
-  totalSpots = 2,
-  winAmount = "80rs",
-  winPercentage = "50%",
-  isDisabled = false,
+  price,
+  entry,
+  timeLeft,
+  timeSlot,
+  leftSpots,
+  totalSpots,
+  winAmount,
+  winPercentage,
+  isDisabled,
   onJoin,
   onEdit,
   onDisable,
   onDelete,
 }) => {
-  const progressPercent = ((totalSpots - leftSpots) / totalSpots) * 100;
+  const progressPercent =
+    totalSpots && leftSpots !== undefined
+      ? ((totalSpots - leftSpots) / totalSpots) * 100
+      : 0;
 
   return (
     <div className={styles.cardWrapper}>
-      {/* Card itself */}
       <div className={`${styles.card} ${isDisabled ? styles.disabled : ""}`}>
         {/* Entry Fee Pill */}
         <div className={styles.entryTag}>{entry}</div>
@@ -43,6 +45,7 @@ const ContestCard = ({
             <span className={styles.subText}>Price Pool</span>
           </span>
         </div>
+
         <div className={styles.insidecontent}>
           {/* Time Info */}
           <div className={styles.timeRow}>

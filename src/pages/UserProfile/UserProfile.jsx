@@ -10,7 +10,8 @@ import { useNavigate } from "react-router-dom";
 import ParticipationHistory from "./ParticipationHistory/ParticipationHistory";
 import WalletHistory from "./WalletHistory/WalletHistory";
 import { IoIosArrowBack } from "react-icons/io";
-
+import { useDispatch } from "react-redux";
+import { openModal } from "../../redux/slices/modalSlice";
 const userData = [
   {
     _id: "1",
@@ -83,6 +84,7 @@ const walletData = [
 ];
 
 const UserProfile = () => {
+  const dispatch = useDispatch();
   const { userId } = useParams();
   const user = userData.find((u) => u._id === userId);
   const [activeTab, setActiveTab] = useState("Participation history");
@@ -177,7 +179,16 @@ const UserProfile = () => {
               <Button
                 onClick={() => {
                   const active = tabs.find((tab) => tab.label === activeTab);
-                  downloadCSV(active.fileName, active.headers, active.data);
+                  dispatch(
+                    openModal({
+                      type: "downloadDataRange",
+                      data: {
+                        fileName: active.fileName,
+                        headers: active.headers,
+                        originalData: active.data, // send full data to filter
+                      },
+                    })
+                  );
                 }}
               >
                 Download data

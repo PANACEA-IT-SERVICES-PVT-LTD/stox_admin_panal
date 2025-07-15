@@ -7,11 +7,13 @@ import TopUps from "../../sections/WalletSection/TopUps/TopUps";
 import Button from "../../components/Button/Button";
 import BuyTodaySellTomorrow from "../../sections/ContestSection/BuyTodaySellTomorrow/BuyTodaySellTomorrow";
 import Intraday from "../../sections/ContestSection/Intraday/Intraday";
+import { useDispatch } from "react-redux";
+import { openModal } from "../../redux/slices/modalSlice"; // ✅ adjust path if needed
 
 const Contests = () => {
   const [activeTab, setActiveTab] = useState("Buy today sell tomorrow");
   const [selectedDate, setSelectedDate] = useState("");
-
+  const dispatch = useDispatch();
   const tab = [
     {
       label: "Buy today sell tomorrow",
@@ -67,7 +69,7 @@ const Contests = () => {
                 />
               </div>
               <div className={styles.downloadBtn}>
-                <Button onClick={console.log("Creating")}>
+                <Button onClick={() => dispatch(openModal("createContest"))}>
                   Create Contest
                 </Button>
               </div>

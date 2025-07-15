@@ -6,7 +6,8 @@ import CalenderInput from "../../../components/CalenderInput/CalenderInput";
 import Dropdown from "../../../components/Dropdown/Dropdown";
 import { MdModeEdit } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
-
+import { useDispatch } from "react-redux";
+import { openModal } from "../../../redux/slices/modalSlice";
 import CalendarInput from "../../../components/CalenderInput/CalenderInput";
 const userData = [
   {
@@ -36,6 +37,7 @@ const UserDetails = () => {
     const navigate = useNavigate();
 
   const [selectedIds, setSelectedIds] = useState([]);
+  const dispatch = useDispatch();
 
   const headings = [
     {
@@ -85,7 +87,7 @@ const UserDetails = () => {
             }}
           />
           <u
-            style={{ cursor: "pointer", }}
+            style={{ cursor: "pointer" }}
             onClick={() => navigate(`/usermanagement/userprofile/${item._id}`)}
           >
             {item.name}
@@ -103,7 +105,7 @@ const UserDetails = () => {
           {item.wallet}
           <MdModeEdit
             style={{ cursor: "pointer" }}
-            onClick={() => console.log("Edit Wallet for:", item.name)}
+            onClick={() => dispatch(openModal("updateBalance"))} // ✅
           />
         </div>
       ),
@@ -113,7 +115,7 @@ const UserDetails = () => {
           <span style={{ color: "green" }}>{item.status}</span>
           <MdModeEdit
             style={{ cursor: "pointer" }}
-            onClick={() => console.log("Edit Status for:", item.name)}
+            onClick={() => dispatch(openModal("updateStatus"))} // ✅
           />
         </div>
       ),

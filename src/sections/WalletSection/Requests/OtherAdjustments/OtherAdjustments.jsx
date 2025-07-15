@@ -2,6 +2,8 @@ import styles from "./OtherAdjustments.module.css";
 import DynamicTable from "../../../../components/DynamicTable/DynamicTable";
 import { useState, useEffect } from "react";
 import { MdModeEdit } from "react-icons/md";
+import { useDispatch } from "react-redux";
+import { openModal } from "../../../../redux/slices/modalSlice"; // adjust path if needed
 
 const userData = [
   {
@@ -36,6 +38,7 @@ const userData = [
 
 const OtherAdjustments = ({ search = "", onDataChange }) => {
   const [selectedIds, setSelectedIds] = useState([]);
+  const dispatch = useDispatch();
 
   const filteredData = userData.filter((item) =>
     item.name.toLowerCase().includes(search.toLowerCase())
@@ -98,24 +101,25 @@ const OtherAdjustments = ({ search = "", onDataChange }) => {
         </div>
       ),
       username: item.username,
-      wallet: (
-        <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-          {item.wallet}
-          <MdModeEdit
-            style={{ cursor: "pointer" }}
-            onClick={() => console.log("Edit Wallet for:", item.name)}
-          />
-        </div>
-      ),
-      status: (
-        <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-          <span style={{ color: "green" }}>{item.status}</span>
-          <MdModeEdit
-            style={{ cursor: "pointer" }}
-            onClick={() => console.log("Edit Status for:", item.name)}
-          />
-        </div>
-      ),
+       wallet: (
+              <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                {item.wallet}
+                <MdModeEdit
+                  style={{ cursor: "pointer" }}
+                  onClick={() => dispatch(openModal("updateBalance"))} // ✅
+                />
+              </div>
+            ),
+      
+            status: (
+              <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                <span style={{ color: "green" }}>{item.status}</span>
+                <MdModeEdit
+                  style={{ cursor: "pointer" }}
+                  onClick={() => dispatch(openModal("updateStatus"))} // ✅
+                />
+              </div>
+            ),
     };
   });
 

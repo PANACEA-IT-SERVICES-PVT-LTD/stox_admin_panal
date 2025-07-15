@@ -15,6 +15,13 @@
     /* ✅ same as label */
     margin-left: 2px;
 }
+.heading {
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    display: block;
+}
 
 .container {
     position: relative;
@@ -23,7 +30,7 @@
     padding: 0.75rem 1rem;
     background: transparent;
     border-radius: 12px;
-    border: 1px solid rgba(from var(--White_Color) r g b / 0.5);
+    border: 0.01px solid rgba(from var(--White_Color) r g b / 0.5);
     font-size: var(--Font_Size_2);
     color: rgba(from var(--White_Color) r g b / 0.5);
     cursor: pointer;
